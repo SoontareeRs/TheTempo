@@ -6,67 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h3>Registration Form</h3>
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <h3>Registration Form</h3>
+            </div>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required minlength="1" aria-label="First Name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required minlength="1" aria-label="Last Name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="birthDay">BirthDay:</label>
+                    <input type="date" id="birthDay" name="birthDay" required aria-label="Birthday" required />
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male" aria-label="Male" required />
+                    <label for="male">Male</label><br>
+
+                    <input type="radio" id="female" name="gender" value="female" aria-label="Female" required />
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" aria-label="Email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" aria-label="Phone Number" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="role-select">Choose your role:</label>
+                    <select name="roles" id="role-select" aria-label="Role" required>
+                        <option value=""></option>
+                        <option value="intern">Intern</option>
+                        <option value="tester">Tester</option>
+                        <option value="developer">Developer</option>
+                        <option value="scrum-master">Scrum Master</option>
+                        <option value="product-manager">Product Manager</option>
+                        <option value="product-owner">Product Owner</option>
+                        <option value="ceo">CEO</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="submit-button" />
+                </div>
+            </form>
         </div>
-
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required minlength="1" aria-label="First Name" />
-            </div>
-
-            <div class="form-group">
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required minlength="1" aria-label="Last Name" />
-            </div>
-
-            <div class="form-group">
-                <label for="birthDay">BirthDay:</label>
-                <input type="date" id="birthDay" name="birthDay" required aria-label="Birthday" required/>
-            </div>
-
-            <fieldset class="form-group">
-                <legend>Gender:</legend>
-                <input type="radio" id="male" name="gender" value="male" aria-label="Male" required/>
-                <label for="male">Male</label><br>
-
-                <input type="radio" id="female" name="gender" value="female" aria-label="Female" required/>
-                <label for="female">Female</label>
-            </fieldset>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" aria-label="Email" required />
-            </div>
-
-            <div class="form-group">
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" aria-label="Phone Number" required/>
-            </div>
-
-            <div class="form-group">
-                <label for="role-select">Choose your role:</label>
-                <select name="roles" id="role-select" aria-label="Role" required>
-                    <option value=""></option>
-                    <option value="intern">Intern</option>
-                    <option value="tester">Tester</option>
-                    <option value="developer">Developer</option>
-                    <option value="scrum-master">Scrum Master</option>
-                    <option value="product-manager">Product Manager</option>
-                    <option value="product-owner">Product Owner</option>
-                    <option value="ceo">CEO</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Submit" class="submit-button" />
-            </div>
-        </form>
     </div>
 </body>
 
